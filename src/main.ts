@@ -24,6 +24,7 @@ window.addEventListener("mousemove", (e) => {
     scrollProgress.style.width = e.clientX - rect.x + "px";
     const sliderLeft = (e.clientX - rect.x)
     slider.style.left = sliderLeft + "px";
-    const ratio = Math.round(((sliderLeft - 20) / barRec.width) * 100)
-    p.innerHTML = ratio.toString()
+    const initRatio = ((sliderLeft - 20) / barRec.width) * 99.9
+    const Roundedratio = Math.round(initRatio > 99 ? 100 : initRatio < 1 ? 0 : initRatio)
+    p.innerHTML = Roundedratio.toString()
 });
