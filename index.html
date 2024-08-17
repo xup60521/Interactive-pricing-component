@@ -9,12 +9,24 @@
     <link rel="stylesheet" href="./src/style.css">
 </head>
 
-<body>
-    <main
-        class="w-full min-h-screen bg-gradient-to-r from-fuchsia-500 to-cyan-500 flex items-center justify-center">
-        <h1 class="font-mono font-bold text-3xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-            Vite + Typescript + TailwindCSS + GitHub Pages
-        </h1>
+<body class="bg-c_Very_Pale_Blue">
+    <main class="w-full min-h-screen flex flex-col">
+        <div class="w-full bg-[url(/images/bg-pattern.svg)] aspect-[1440/449] bg-cover">
+
+        </div>
+        <div class="flex justify-center w-full">
+            <div class="bg-white rounded-lg flex flex-col p-4 md:w-[40rem]">
+                <div id="scroll-container" class="flex items-center w-full relative px-5">
+                    <button id="slider" style="left: 0;" class="absolute -translate-x-[50%] z-10 size-10 -translate-y-[50%] top-[50%] bg-c_Strong_Cyan transition hover:bg-c_Soft_Cyan rounded-full flex items-center justify-center">
+                        <img src="/images/icon-slider.svg" alt="slider icon" class="" />
+                    </button>
+                    <div id="scroll-bar" class="rounded-full relative w-full bg-c_Light_Grayish_Blue h-2 overflow-hidden">
+                        <div id="progress-fill-bar" class="h-full bg-c_Soft_Cyan absolute"></div>
+                    </div>
+                </div>
+                <p class="py-4"></p>
+            </div>
+        </div>
     </main>
     <script type="module" src="/src/main.ts"></script>
 </body>
