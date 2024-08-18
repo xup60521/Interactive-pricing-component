@@ -11,20 +11,64 @@
 
 <body class="bg-c_Very_Pale_Blue">
     <main class="w-full min-h-screen flex flex-col">
-        <div class="w-full bg-[url(/images/bg-pattern.svg)] aspect-[1440/449] bg-cover">
-
-        </div>
-        <div class="flex justify-center w-full">
-            <div class="bg-white rounded-lg flex flex-col p-4 md:w-[40rem]">
-                <div id="scroll-container" class="flex items-center w-full relative px-5">
-                    <button id="slider" style="left: 0;" class="absolute -translate-x-[50%] z-10 size-10 -translate-y-[50%] top-[50%] bg-c_Strong_Cyan transition hover:bg-c_Soft_Cyan rounded-full flex items-center justify-center">
-                        <img src="/images/icon-slider.svg" alt="slider icon" class="" />
-                    </button>
-                    <div id="scroll-bar" class="rounded-full relative w-full bg-c_Light_Grayish_Blue h-2 overflow-hidden">
-                        <div id="progress-fill-bar" class="h-full bg-c_Soft_Cyan absolute"></div>
+        <div class="w-full bg-[url(/images/bg-pattern.svg)] md:aspect-[1440/449] md:h-fit h-[75vh] bg-cover flex flex-col items-center">
+            <div class="md:w-[40rem] flex flex-col gap-4 justify-center items-center bg-[url(/images/pattern-circles.svg)] h-64 bg-no-repeat bg-center">
+                <h1 class="text-c_Dark_Desaturated_Blue md:text-3xl text-xl font-manrope font-black text-center">Simple, traffic-based pricing</h1>
+                <p class="font-manrope text-c_Grayish_Blue text-center md:text-[16px] text-sm px-[5.35rem]">Sign-up for our 30-day trial. No credit card required.</p>
+            </div>
+            <div class="md:w-[40rem] absolute md:translate-y-[16rem] translate-y-[15rem] w-[90vw] pb-16">
+                <div class="bg-white rounded-lg flex flex-col pb-8 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+                    <div class="flex flex-col w-full px-10">
+                        <div class="flex items-center justify-between pt-12 pb-8 px-5">
+                            <p class="font-manrope font-bold text-c_Grayish_Blue tracking-widest md:w-fit w-full text-center"><span id="pageviews">10K</span> PAGEVIEWS</p>
+                            <div class="md:flex hidden items-center gap-2">
+                                <span class="font-manrope text-black text-[2.5rem] tracking-tight font-black">$<span id="price">8.00</span></span>
+                                <span class="font-manrope font-semibold text-c_Grayish_Blue">/ month</span>
+                            </div>
+                        </div>
+                        <div id="scroll-container" class="flex items-center w-full relative px-5 py-3">
+                            <button id="slider" class="absolute shadow-[0_20px_30px_hsl(174,86%,45%)] group -translate-x-[50%] z-10 size-10 -translate-y-[50%] top-[50%] bg-c_Strong_Cyan transition hover:bg-c_Soft_Cyan rounded-full flex items-center justify-center">
+                                <img src="/images/icon-slider.svg" alt="slider icon" class="group-hover:brightness-125 transition" />
+                            </button>
+                            <div id="scroll-bar" class="rounded-full cursor-pointer relative w-full bg-c_Light_Grayish_Blue h-2 overflow-hidden">
+                                <div id="progress-fill-bar" class="h-full bg-c_Soft_Cyan cursor-pointer absolute"></div>
+                            </div>
+                        </div>
+                        <div class="md:hidden flex items-center gap-2 w-full justify-center pt-8 -mb-8">
+                            <span class="font-manrope text-black text-[2.5rem] tracking-tight font-black">$<span id="price-mobile">8.00</span></span>
+                            <span class="font-manrope font-semibold text-c_Grayish_Blue">/ month</span>
+                        </div>
+                        <div class="flex items-center justify-center gap-4 pt-16 pb-12 relative">
+                            <span class="md:text-sm text-xs font-manrope text-c_Grayish_Blue font-bold">Monthly Billing</span>
+                            <button id="switch" class="aspect-[1.85/1] transition hover:bg-c_Soft_Cyan h-6 rounded-full p-1 bg-c_Light_Grayish_Blue relative">
+                                <div class="aspect-square rounded-full bg-white left-1 top-1 size-4"></div>
+                            </button>
+                            <span class="md:text-sm text-xs font-manrope text-c_Grayish_Blue font-bold">Yearly Billing</span>
+                            <span class="absolute md:block hidden translate-x-[11rem] text-xs font-bold font-manrope rounded-lg py-1 px-2 scale-75 bg-c_Light_Grayish_Red text-c_Light_Red">25% discount</span>
+                            <span class="absolute md:hidden translate-x-[9rem] text-xs font-bold font-manrope rounded-lg py-1 px-2 scale-75 bg-c_Light_Grayish_Red text-c_Light_Red">-25%</span>
+                        </div>
+                    </div>
+                    <div class="p-1 border-b-[1px] border-c_Light_Grayish_Blue w-full">
+        
+                    </div>
+                    <div class="flex md:flex-row flex-col items-center justify-between px-10">
+                        <div class="flex flex-col gap-3 py-10">
+                            <p class="flex items-center gap-4 md:justify-normal justify-center">
+                                <img src="/images/icon-check.svg" alt="check icon 1">
+                                <span class="font-manrope md:text-xs text-c_Grayish_Blue font-semibold">Unlimited websites</span>
+                            </p>
+                            <p class="flex items-center gap-4 md:justify-normal justify-center">
+                                <img src="/images/icon-check.svg" alt="check icon 2">
+                                <span class="font-manrope md:text-xs text-c_Grayish_Blue font-semibold">100% data ownership</span>
+                            </p>
+                            <p class="flex items-center gap-4 md:justify-normal justify-center">
+                                <img src="/images/icon-check.svg" alt="check icon 3">
+                                <span class="font-manrope md:text-xs text-c_Grayish_Blue font-semibold">Email reports</span>
+                            </p>
+                        </div>
+                        <button class="md:text-xs text-c_Light_Grayish_Blue font-manrope font-bold transition hover:text-white rounded-full px-12 py-3 bg-c_Dark_Desaturated_Blue">Start my trial</button>
                     </div>
                 </div>
-                <p class="py-4"></p>
             </div>
         </div>
     </main>
